@@ -1,0 +1,33 @@
+
+.characters__characters-list-item {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: #63A9A4;
+    color: #0A1A3B;
+
+    cursor: pointer;
+}
+
+.character-item__name {
+    font-weight: 800;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.character-item__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    min-height: 300px;
+}
+.character-item__image img {
+    width: 80%;
+}
+
+@media (max-width: 576px) {
+    .character-item__image {
+        min-width: 200px;
+        min-height: 200px;
+    }
+}

@@ -1,0 +1,112 @@
+.characters__filters {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.characters__filters-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+select {
+    display: block;
+}
+.characters__filters-preloader {
+    margin-left: auto;
+}
+.characters__filters-update-btn {
+    margin-left: auto;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #63A9A4;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 5px solid #1D325A;
+
+}
+
+
+.characters__filters-update-btn:hover {
+    cursor: pointer;
+    background-color: #5572AD;
+    transform: rotateZ(90deg);
+}
+
+.characters__filters-list-item {
+    border: 1px solid #4AA9A2;
+    border-radius: 10px;
+    background-color: #63A9A4;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.characters__filters-list-item > * {
+    min-width: 120px!important;
+    background-color: #63A9A4!important;
+}
+
+.characters__filters-mobile-btn {
+    cursor: pointer;
+    display: none;
+}
+
+.characters__filters-mobile-btn img {
+    width: 40px;
+}
+
+.characters__filters-close-mobile-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.characters__filters-close-mobile-btn img {
+    width: 40px;
+    height: 40px;
+
+}
+@media (max-width: 1200px) {
+    .characters__filters-mobile-btn {
+        display: block;
+    }
+
+    .characters__filters-list {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        height: 0px;
+        width: 100vw;
+        background-color: #63A9A4;
+        transition: all 0.5s;
+        z-index: 900;
+        align-items: flex-start;
+    }
+    .characters__filters-close-mobile-btn {
+        display: block;
+    }
+    .characters__filters-list.open {
+        height: 100vh;
+
+    }
+    .characters__filters-list-item {
+        border-radius: 0;
+        width: 100%;
+    }
+    .characters__filters-update-btn {
+        margin: 50px auto;
+    }
+}
