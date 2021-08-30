@@ -3,6 +3,10 @@
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    select {
+        display: block;
+    }
 }
 
 .characters__filters-list {
@@ -11,12 +15,11 @@
     align-items: center;
     width: 100%;
 }
-select {
-    display: block;
-}
+
 .characters__filters-preloader {
     margin-left: auto;
 }
+
 .characters__filters-update-btn {
     margin-left: auto;
     box-sizing: border-box;
@@ -30,15 +33,14 @@ select {
     border-radius: 10px;
     transition: background-color 0.3s, transform 0.3s;
     border: 5px solid #1D325A;
+    &:hover {
+        cursor: pointer;
+        background-color: #5572AD;
+        transform: rotateZ(90deg);
+    }
 
 }
 
-
-.characters__filters-update-btn:hover {
-    cursor: pointer;
-    background-color: #5572AD;
-    transform: rotateZ(90deg);
-}
 
 .characters__filters-list-item {
     border: 1px solid #4AA9A2;
@@ -48,19 +50,22 @@ select {
     display: flex;
     align-items: center;
     margin-right: 20px;
+    & > * {
+        min-width: 120px!important;
+        background-color: #63A9A4!important;
+    }
 }
-.characters__filters-list-item > * {
-    min-width: 120px!important;
-    background-color: #63A9A4!important;
-}
+
 
 .characters__filters-mobile-btn {
     cursor: pointer;
     display: none;
 }
 
-.characters__filters-mobile-btn img {
-    width: 40px;
+.characters__filters-mobile-btn {
+    img {
+        width: 40px;
+    }
 }
 
 .characters__filters-close-mobile-btn {
@@ -69,19 +74,21 @@ select {
     top: 20px;
     right: 20px;
     cursor: pointer;
+    img {
+        width: 40px;
+        height: 40px;
+    }
 }
 
-.characters__filters-close-mobile-btn img {
-    width: 40px;
-    height: 40px;
-
-}
 @media (max-width: 1200px) {
     .characters__filters-mobile-btn {
         display: block;
     }
-
+    .characters__filters-preloader {
+        margin: 50px auto;
+    }
     .characters__filters-list {
+        padding-top: 0px;
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -95,18 +102,25 @@ select {
         z-index: 900;
         align-items: flex-start;
     }
+
     .characters__filters-close-mobile-btn {
         display: block;
     }
     .characters__filters-list.open {
         height: 100vh;
-
+        padding-top: 40px;
     }
     .characters__filters-list-item {
         border-radius: 0;
         width: 100%;
+        justify-content: center;
+        & > * {
+            width: 70%;
+        }
     }
     .characters__filters-update-btn {
         margin: 50px auto;
     }
+}
+@media (max-width: 1200px) {
 }

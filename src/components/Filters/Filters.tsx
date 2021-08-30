@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Filters.css'
+import './Filters.scss'
 import {FormControl, InputLabel, MenuItem, Select, TextField} from "@material-ui/core";
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 import CircularProgress from '@material-ui/core/CircularProgress';

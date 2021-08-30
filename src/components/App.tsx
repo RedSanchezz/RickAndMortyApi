@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './App.css';
+import './App.scss';
 import Character from "./Character/Character";
 import Filters from './Filters/Filters';
 import {getCharacters, ICharacter} from '../API/characterAPI'
@@ -52,6 +52,7 @@ const App: React.FC = () => {
         setFilters(filters);
     }
 
+
     return (
         <div className="App">
             <Container maxWidth="lg">
@@ -72,7 +73,7 @@ const App: React.FC = () => {
                 }
                 <Pagination showPreloader={showPreloader} currentPage={currentPage} setCurrentPage={setCurrentPage} pagesCount={pagesCount}/>
             </Container>
-            {currentCharacter && <ModalCharacter  isOpen={isOpenModal}
+            {currentCharacter && <ModalCharacter isOpen={isOpenModal}
                              character={currentCharacter}
                              setOpenModal={setOpenModal}
             />}
