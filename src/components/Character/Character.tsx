@@ -31,7 +31,7 @@ const Character: React.FC<CharacterProps> = ({character, setOpenModal, setCurren
                         Пол: {character.gender}
                     </div>
                     <div className='properties-list__item character-item__created'>
-                        Вид персоонажа: {character.species}
+                        Вид персонажа: {character.species}
                     </div>
                     <div className='properties-list__item character-item__created'>
                             Дата создания: {character.created.slice(0, 16).replace('T', ' ')}

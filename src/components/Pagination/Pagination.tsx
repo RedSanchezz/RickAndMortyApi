@@ -6,7 +6,6 @@ interface PaginationProps {
     setCurrentPage(page:number):void
     pagesCount: number
     showPreloader: boolean
-
 }
 
 
@@ -21,7 +20,6 @@ const Pagination: React.FC<PaginationProps> = ({currentPage, setCurrentPage, pag
     }
 
     function setCurrentPageHandler(number:number) {
-        if(showPreloader) return;
         setCurrentPage(number)
     }
 
